@@ -1,0 +1,38 @@
+{
+  "name": "@leep/carousel",
+  "description": "A simple carousel utility to handle typical needs.",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Jordan Leeper",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmleep/"
+  },
+  "keywords": [
+    "carousel"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/lib/index.js",
+  "types": "./dist/lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/lib/index.js",
+      "require": "./dist/lib/index.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0",
+    "vite-plugin-dts": "^3.7.2"
+  }
+}
