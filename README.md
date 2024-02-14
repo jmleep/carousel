@@ -1,10 +1,10 @@
-# @leep/carousel
+# @jmleep/carousel
 
 A simple carousel utility to handle typical needs.
 
 ### Installation
 
-`npm i @leep/carousel`
+`npm i @jmleep/carousel`
 
 ### Usage
 
