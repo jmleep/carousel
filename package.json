@@ -2,7 +2,7 @@
   "name": "@jmleep/carousel",
   "description": "A simple carousel utility to handle typical needs.",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "author": "Jordan Leeper",
   "license": "MIT",
@@ -11,7 +11,11 @@
     "url": "https://github.com/jmleep/carousel.git"
   },
   "keywords": [
-    "carousel"
+    "carousel",
+    "react",
+    "react carousel",
+    "lit carousel",
+    "angular carousel"
   ],
   "files": [
     "dist"

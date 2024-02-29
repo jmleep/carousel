@@ -2,11 +2,11 @@
 
 A simple carousel utility to handle typical needs.
 
-### Installation
+## Installation
 
 `npm i @jmleep/carousel`
 
-### Usage
+## Usage
 
 Create a carousel object with the desired iterable items.
 
@@ -18,15 +18,10 @@ function onActiveItemChange(activeItem: string) {
   console.log(activeItem)
 }
 
-function onPlayingStatechange(isPlaying: boolean) {
-  console.log(isPlaying)
-}
-
 // with 5000ms speed
 const carousel2 = new Carousel(
   ["item1", "item2", "item3"],
   onActiveItemChange,
-  onPlayingStateChange,
   5000
 )
 ```
@@ -49,15 +44,10 @@ function onActiveItemChange(activeItem: string) {
   console.log(activeItem)
 }
 
-function onPlayingStatechange(isPlaying: boolean) {
-  console.log(isPlaying)
-}
-
 // with 5000ms speed
 const carousel2 = new Carousel(
   ["item1", "item2", "item3"],
   onActiveItemChange,
-  onPlayingStateChange,
   5000
 )
 ```
@@ -74,4 +64,30 @@ Update the carousel speed
 
 ```ts
 carousel.setSpeed(2000)
+```
+
+### React Example
+
+```js
+const [active, setActive] = useState("")
+const [carousel, setCarousel] = useState()
+
+useEffect(() => {
+  setCarousel(
+    new Carousel(["first", "second", "third", "fourth"], (i) => {
+      console.log(i)
+      setActive(i)
+    })
+  )
+}, [])
+
+return (
+  <div>
+    {active}
+    <button onClick={() => carousel.play()}>play</button>
+    <button onClick={() => carousel.pause()}>pause</button>
+    <button onClick={() => carousel.next()}>next</button>
+    <button onClick={() => carousel.previous()}>previous</button>
+  </div>
+)
 ```
